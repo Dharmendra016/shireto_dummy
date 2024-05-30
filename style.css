@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: fixed;
+    background-color: transparent;
+    transform: translate(-50%,-50%);
+    pointer-events:none;
+    z-index: 3;
+}
+#main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images img{
+    height:200px ;
+}
