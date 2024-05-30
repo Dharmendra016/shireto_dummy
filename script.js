@@ -52,11 +52,4 @@ document.addEventListener('mousemove', (e) => {
         y: (mouseY - 0.5) * 100,
         ease: 'power2.out'
     });
-
-    gsap.to('.images i2', {
-        duration: 0.5,
-        x: (mouseX - 0.5) * 50,
-        y: (mouseY - 0.5) * 50,
-        ease: 'power2.out'
-    });
 });
