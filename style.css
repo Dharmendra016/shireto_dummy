@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: Roboto,sans-serif;
 }
+a{
+    text-decoration: none;
+}
 
 :root{
     --primary_red:#E11D3A;
@@ -25,8 +28,6 @@
 }
 #main{
     width: 100%;
-    height: 100vh;
-
     background-color: var(--secondary_color_black);
 }
 
@@ -43,6 +44,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1920px;
     width: 1080px;
     margin: 0 auto ;
     padding-top:10px;
@@ -86,13 +88,208 @@
 }
 
 
-.home-page{
+.hero-page{
     width: 100%;
     height: 100vh;
+    color:var(--secondary_color_white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    line-height: 1;
+}
+
+
+.hero-page video{
+    height: 500px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.hero-page h1, p{
+    z-index: 2;
+}
+
+.hero-page h1{
+    font-size: 5rem;
+    color:transparent ;
+    -webkit-text-stroke: 2px white;
+    text-align: center;
+
+}
+.hero-page .t1:hover{
+    color:var(--primary_red);
+}
+.hero-page .t2:hover{
+    color:var(--primary_red);
+}
+.hero-page .t3{
+    color:transparent ;
+    -webkit-text-stroke: 2px white;
+    font-size: 3rem;
+}
+.hero-page .t3:hover{
+    color:var(--primary_red);
+}
+
+.hero-page .quote{
+    margin-top: 50px;
+}
+
+
+
+
+.home-page{
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+    max-height: 1080px;
     /* overflow: hidden;    */
 }
 .home-page img{
     height: 100%;
     width: 100%;
+    object-fit:none;
+}
+
+.formula-bharat-page{
+    max-width: 1920px;
+    width: 1080px;
+    margin: 0 auto ;
+}
+
+.formula-bharat-page .title-bharat {
+    color:var(--primary_red); 
+    padding-top: 5vw;
+}
+.formula-bharat-page .title-bharat h2:nth-child(1){
+    font-size: 2.5rem;
+}
+
+.formula-bharat-page .title-bharat h2:nth-child(2){
+    color:transparent ;
+    -webkit-text-stroke: 1px white;
+    letter-spacing: 5px;
+    font-size: 2rem;
+    padding-left: 30px;
+}
+
+.formula-bharat-page .models {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    margin-top: 5vw;
+}
+
+.formula-bharat-page .models .mleft{
+    overflow: hidden;
+    width: 45%;
+    height: inherit;
+    color:white; 
+    /* border: 2px solid red; */
+}
+
+.descriptions{
+    width: 90%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formula-bharat-page .models .mleft p{
+    font-size: 1.2vw;
+    line-height: 1;
+    font-weight: 400;
+    /* text-transform: capitalize; */
+    text-align: center;
+    margin: 1.5vw 0;
+}
+
+.descriptions h3{
+    font-size: 1.5rem;
+}
+
+
+.formula-bharat-page .models .mright{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 45%;
+    height: inherit;
+}
+
+.models .mright .images {
+    width: 90%;
+    height: 90%;
+}
+.images img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+.btndiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btndiv button {
+    padding: 0.5vw 3vw;
+    border-radius: 100px;
+    border: 2px solid var(--secondary_color_black);
+    background-color: var(--secondary_color_white);
+    font-size: 1vw;
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.btndiv button a{
+    color:black;
+}
+
+.sponsor-list{
+    width: 100%;
+    height: 100vh;
+}
+
+.item{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.sponsor-list img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    border-radius: 12px;
+}
+
+.sponsors{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.front-text{
+    position: absolute;
+    text-align: center;
+    color:white;
+}
+
+.front-text h3{
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 400;
+
 }
