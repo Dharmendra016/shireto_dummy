@@ -379,7 +379,6 @@ a{
     top: -100%;
     transition: all ease 0.25s;
     border-radius: 15px;
-
 }
 
 .elem:hover .overlay {
@@ -390,7 +389,6 @@ a{
     position: fixed;
     height: 227px;
     width: 200px;
-    background-color: green;
     z-index: 10;
     top: 35%;
     left: 59%;
@@ -399,4 +397,5 @@ a{
     background-position:center;
     background-size:contain;
     box-shadow: -3px 3px 7px 1px white;
+    transition: all ease 0.4s;
 }

@@ -91,7 +91,7 @@ Shery.imageEffect(".images", {
 
 
 Shery.hoverWithMediaCircle(".hvr" ,{
-    images:["./assets/_logo_mask.png" , "./assets/shireto logo_mask.png" , "./assets/project bharat 2025 Designs/side-expo.png"],
+    images:["./assets/logo0.png" , "./assets/shireto logo_mask.png" , "./assets/project bharat 2025 Designs/side-expo.png"],
     duration:2,
 })
 
