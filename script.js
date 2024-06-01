@@ -2,7 +2,9 @@ const locomotiveScroll = new LocomotiveScroll({
     smooth: true,
 });
 // Shery.mouseFollower();
-Shery.makeMagnet(".magnet");
+Shery.makeMagnet(".magnet",{
+  mouseFollower: false,
+});
 
 var cursor = document.querySelector("#cursor");
 var main = document.querySelector("#main");
@@ -45,7 +47,7 @@ gsap.from(".nlink" , {
 
 //image animation 
 
-Shery.imageEffect(".home-page" , {
+Shery.imageEffect(".team-images" , {
     style:5,
     config:{"a":{"value":1.6,"range":[0,30]},"b":{"value":-0.92,"range":[-1,1]},"zindex":{"value":"100","range":[-9999999,9999999]},"aspect":{"value":2.0850077279752703},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":true},"growSize":{"value":2.5,"range":[1,15]},"durationOut":{"value":0.44,"range":[0.1,5]},"durationIn":{"value":0.47,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":false},"maskVal":{"value":1,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":false},"onMouse":{"value":1},"noise_speed":{"value":0.46,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2],"_gsap":{"id":11}},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.46,"range":[0,2]},"noise_scale":{"value":17.56,"range":[0,100]}},
     gooey:true, 
@@ -55,7 +57,7 @@ Shery.imageEffect(".home-page" , {
 
 Shery.imageEffect(".formula-bharat-page .right-part" , {
     style:3 , 
-    debug:true,
+    // debug:true,
 })
 
 
@@ -191,3 +193,48 @@ elements.forEach((ele) => {
         fixedImage.style.backgroundImage = `url("${image}")`; 
     })
 })
+
+
+var tl = gsap.timeline({
+    scrollTrigger:{
+        trigger:".achievements",
+        scroller:"body",
+        // markers:true,
+        start:"top 50%",
+        end:"top 0",
+        scrub:1,
+    }
+})
+
+tl.from(".achievements .heading h2" , {
+    y:-80 ,
+    // duration:1,
+    opacity:0
+})
+tl.from(".aleft" , {
+    x:-500,
+    duration:3,
+    opacity:0,
+},"animation")
+tl.from(".aright" , {
+    x:500,
+    duration:3,
+    opacity:0,
+} ,"animation")
+
+tl.from(".joinus-bnt" , {
+    y:200,
+    duration:2,
+    opacity:0 
+})
+
+Shery.imageEffect(".aleft img", {
+    style: 4, //Select Style
+    config:{"uColor":{"value":false},"uSpeed":{"value":0.6,"range":[0.1,1],"rangep":[1,10]},"uAmplitude":{"value":1.5,"range":[0,5]},"uFrequency":{"value":3.82,"range":[0,10]},"geoVertex":{"range":[1,64],"value":32},"zindex":{"value":"100","range":[-9999999,9999999]},"aspect":{"value":1.35},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.49,"range":[1,5]},"scrollType":{"value":0},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}},
+  });
+
+
+  Shery.imageEffect(".aright img", {
+    style: 4, //Select Style
+    config:{"uColor":{"value":false},"uSpeed":{"value":0.6,"range":[0.1,1],"rangep":[1,10]},"uAmplitude":{"value":1.5,"range":[0,5]},"uFrequency":{"value":3.82,"range":[0,10]},"geoVertex":{"range":[1,64],"value":32},"zindex":{"value":"100","range":[-9999999,9999999]},"aspect":{"value":1.35},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.49,"range":[1,5]},"scrollType":{"value":0},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}},
+  });

@@ -139,19 +139,45 @@ a{
 }
 
 
-
-
-.home-page{
-    width: 100%;
-    max-width: 1920px;
-    height: 100vh;
-    max-height: 1080px;
-    /* overflow: hidden;    */
-}
 .home-page img{
     height: 100%;
     width: 100%;
     object-fit:none;
+}
+
+.team-description{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.team-description .team-images{
+    height:inherit;
+    width: 60%;
+    border: 2px solid red;
+}
+.team-description .team-images img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.team-description .team-right{
+    height: 100px;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 3rem;
+}
+.team-right p{
+    text-align: center;
+
 }
 
 .formula-bharat-page{
@@ -202,7 +228,7 @@ a{
 }
 
 .formula-bharat-page .models .mleft p{
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     line-height: 1;
     font-weight: 400;
     /* text-transform: capitalize; */
@@ -211,7 +237,7 @@ a{
 }
 
 .descriptions h3{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 
@@ -398,4 +424,111 @@ a{
     background-size:contain;
     box-shadow: -3px 3px 7px 1px white;
     transition: all ease 0.4s;
+}
+
+.achievements{
+    width: 100%;
+}
+.achievements .heading{
+    color:white;
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.achievement-container{
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.achievements{
+    overflow: hidden;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.achievement-container img{
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+}
+.achievement-container .aleft{
+width: 45%;
+height: 400px;
+}
+.achievement-container .aleft p{
+    /* font-size: 1.3rem; */
+    margin: 7.5px 0;
+    text-align: center;
+}
+.achievement-container .aright{
+width: 45%;
+height: 400px;
+}
+.achievement-container .aright p{
+    text-align: center;
+}
+.achievement-container .aright img{
+    height: 85%;
+}
+.joinus-bnt button {
+    margin: 2rem 0;
+    padding: 1rem 2.5rem;
+    background-color:var(--primary_red);
+}
+
+.joinus-bnt button a {
+    color:white;
+    font-size: 1.3rem;
+}
+
+.footer{
+    color:white;
+    width: 1080px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+    border-top: 2px solid var(--primary_red);
+    border-bottom: 2px solid var(--primary_red);
+}
+
+.footer .shireto-info h2{
+    color:var(--primary_red);
+    font-size: 1.6rem;
+}
+.footer .shireto-info h3 , h4{
+   font-weight: 400;
+}
+
+.footer .contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.footer .contacts a{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.footer .social-medias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;   
+}
+
+.footer .social-medias a{
+    color: white;
+    font-size: 1.8rem;
+}
+
+.footer .social-medias a:hover{
+    color: var(--primary_red);
 }
