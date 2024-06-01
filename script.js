@@ -34,28 +34,6 @@ main.addEventListener('mousemove', () => {
     }, 200); 
 });
 
-
-
-// script.js
-
-// document.addEventListener('mousemove', (e) => {
-//     // Get the width and height of the window
-//     const width = window.innerWidth;
-//     const height = window.innerHeight;
-
-//     // Calculate the position of the mouse in percentage
-//     const mouseX = e.clientX / width;
-//     const mouseY = e.clientY / height;
-
-//     // GSAP animation for each layer
-//     gsap.to('.images img', {
-//         duration: 0.5,
-//         x: (mouseX - 0.5) * 100,
-//         y: (mouseY - 0.5) * 100,
-//         ease: 'power2.out'
-//     });
-// });
-
 //nav animation 
 gsap.from(".nlink" , {
     stagger:.2,
@@ -192,5 +170,24 @@ sponsor_display.addEventListener("mousemove" , (e) => {
             y:deltaY , 
             duration:0.75
         })
+    })
+})
+
+
+const fixedImage = document.querySelector(".featured .fixed-image");
+
+const featuredList = document.querySelector(".featured-list");
+featuredList.addEventListener("mouseenter" , () => {
+    fixedImage.style.display = "block";
+})
+featuredList.addEventListener("mouseleave" , () => {
+    fixedImage.style.display = "none";
+})
+var elements = document.querySelectorAll(".elem")
+
+elements.forEach((ele) => {
+    const image = ele.getAttribute("data-image"); 
+    ele.addEventListener("mouseenter" , () => {
+        fixedImage.style.backgroundImage = `url("${image}")`; 
     })
 })
