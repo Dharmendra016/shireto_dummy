@@ -148,9 +148,11 @@ a{
 }
 
 .team-description .team-images{
-    height:inherit;
+    height: 100%;
     width: 60%;
-    overflow: none;
+    overflow: auto;
+    border: 2px solid green;
+
 }
 .team-description .team-images img{
     height:100%;
